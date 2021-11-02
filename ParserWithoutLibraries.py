@@ -3,6 +3,11 @@
 #Понедельник
 
 #Выполнил студент группы P3115 Бусыгин Дмитрий
+import time
+
+start_time = time.time()
+
+
 def has_only_open_tag(str):
     return (str.find('<') != -1 and str.find('</') == -1)
 
@@ -22,7 +27,7 @@ def get_tag(str):
 def find_repitable_tags(str):
     repitable_tags = {}
     for i in range(len(str)):
-        tag_name = str[i][str[i].find('<') + 1:str[i].find('>')].strip()
+        tag_name = get_tag(str[i]).strip().strip()
         if str.count(str[i]) != 1 and '</' not in str[i]:
             if tag_name not in repitable_tags:
                 repitable_tags[tag_name] = 1
@@ -44,7 +49,7 @@ json_lines.append('{') # задаем первую строку как откр�
 tabs += 1              # добавляем отступ
 
 repitable_tags = find_repitable_tags(xml_lines) #находим повторяющиеся теги
-used_repitable_tags = [] #массив отвечающий за запоминание использованных повторяющихся тегов
+used_repitable_tags = [] #массив, отвечающий за запоминание использованных повторяющихся тегов
 
 for i in range(2, len(xml_lines)):
     s = xml_lines[i]
@@ -102,3 +107,8 @@ for elem in json_lines:
 #закрываем открытые файлы
 json_file.close()
 xml_file.close()
+
+time_file = open('time.txt', 'a')
+print('Десятикратное время выполнения программы, в которой не использовались библиотеки', file=time_file)
+print("--- %s seconds ---" % ((time.time() - start_time)*10), file=time_file)
+time_file.close()
