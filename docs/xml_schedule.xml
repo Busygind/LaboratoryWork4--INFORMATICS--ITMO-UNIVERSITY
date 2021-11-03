@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\Users\Дмитрий\PycharmProjects\LaboratoryWork4-(INFORMATICS)-ITMO-UNIVERSITY\style.xsl"?>
+<root>
+	<title>Расписание группы P3115</title>
+	<schedule>
+		<day>
+			<lessons>
+				<lesson>
+					<short-name-of-day>Пн</short-name-of-day>
+					<time-and-weeks> 10:00-11:30 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 </time-and-weeks>
+					<room>1329 ауд. ул.Ломоносова, д.9, лит. М</room>
+					<name-and-teacher>Математика(Прак) Холодова Светлана Евгеньевна</name-and-teacher>
+					<lesson-format>Очно - дистанционный</lesson-format>
+				</lesson>
+				<lesson>
+					<short-name-of-day>  </short-name-of-day>
+					<time-and-weeks>15:20-16:50 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17</time-and-weeks>
+					<room>1122 ауд. ул.Ломоносова, д.9, лит. М</room>
+					<name-and-teacher>Математика(Лек) Холодова Светлана Евгеньевна</name-and-teacher>
+					<lesson-format>Очно - дистанционный</lesson-format>
+				</lesson>
+			</lessons>
+		</day>
+	</schedule>
+</root>
